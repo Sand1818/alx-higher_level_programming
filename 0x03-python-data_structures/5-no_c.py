@@ -1,4 +1,8 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    n_string = [x for x in my_string if x != 'c' or x != 'C']
-    return ("".join(n_string))
+    cat = ''
+    for s in my_string:
+        if s == 'c' or s == 'C':
+            s = ''
+        cat += s
+    return (cat)
