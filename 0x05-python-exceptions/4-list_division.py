@@ -12,7 +12,7 @@ def list_division(my_list_1, my_list_2, list_length):
             print("division by 0")
         except IndexError:
             out_p = 0
-            print("error")
+            print("out of range")
         finally:
             nuwe_l.append(out_p)
     return nuwe_l
