@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-"""
-Class Intinger
-"""
+"""Integers class"""
 
 
 class MyInt(int):
+    def __init__(self, number):
+        self.number = number
 
-    def __ne__(self, value):
-        if isinstance(value, int):
-            return value == value
-        return False
+    def __ne__(self, val):
+        return (self.number == val)
 
-    def __eq__(self, value):
-        return not self.__ne__(value)
+    def __eq__(self, val):
+        return (self.number != val)
+
+    def __str__(self):
+        return (str(self.number))
