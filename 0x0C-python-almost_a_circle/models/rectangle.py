@@ -85,12 +85,12 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
-        """str method"""
+        """string method"""
         msg = '[Rectangle] ({}) {}/{} - {}/{}'
         return msg.format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
-        """update method"""
+        """update methodology"""
         if args is not None and len(args) != 0:
             if len(args) >= 1 and len(args) != 0:
                 self.id = args[0]
@@ -108,7 +108,7 @@ class Rectangle(Base):
                     setattr(self, k, v)
 
     def to_dictionary(self):
-        """to dictionary method"""
+        """to_dictionary method"""
         a = {}
         a["x"] = self.x
         a["y"] = self.y
