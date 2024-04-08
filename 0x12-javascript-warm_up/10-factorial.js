@@ -8,3 +8,4 @@ function factoriel (numm) {
   } else if (process.argv.length === 3) {
     console.log(factoriel(parseInt(process.argv[2])));
   }
+  
