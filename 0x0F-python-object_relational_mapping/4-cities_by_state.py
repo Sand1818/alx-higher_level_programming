@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""
-displays all values in the states table of
-hbtn_0e_0_usa where name matches the argument
+""" 
+lists cities from the
+database hbtn_0e_4_usa
 """
 
 import sys
@@ -15,11 +15,12 @@ if __name__ == "__main__":
             db=sys.argv[3]
             )
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states\
-            WHERE states.name LIKE BINARY '{}%'\
-            ORDER BY states.id ASC".format(sys.argv[4]))
-    query_rows = cursor.fetchall()
-    for row in query_rows:
+    cursor.execute('SELECT cities.id, cities.name, states.name FROM cities\
+            INNER JOIN states\
+            ON cities.state_id=states.id\
+            ORDER BY cities.id ASC')
+    query = cursor.fetchall()
+    for row in query:
         print(row)
     cursor.close()
     db.close()
