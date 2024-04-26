@@ -7,4 +7,4 @@ import sys
 if __name__ == "__main__":
     info = {"email": sys.argv[2]}
     respon = requests.post(sys.argv[1], data=info)
-    print( respon.text)
+    print(respon.text)
